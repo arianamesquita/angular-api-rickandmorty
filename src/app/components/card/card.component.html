@@ -1,0 +1,22 @@
+<div class="display__container">
+  <div class="card-container" *ngFor="let character of characters">
+
+    <div class="card__title">
+      <h3>{{ character.name | uppercase }}</h3>
+    </div>
+
+    <div class="card__body">
+      <img [src]="character.image" alt="{{ character.name }}">
+    </div>
+
+    <div class="card-stats">
+      <p class="card__stats__title" > {{ cardTitles }} </p>
+      <span class="card__stats__type" >{{ character.location.name }}</span>
+      <p class="card__stats__title" > {{ cardType }} </p>
+      <span class="card__stats__type" >{{ character.species }}</span>
+      <p class="card__stats__title" > {{ cardStatus }} </p>
+      <span class="card__stats__type" >{{ character.status | uppercase }}</span>
+    </div>
+
+  </div>
+</div>
